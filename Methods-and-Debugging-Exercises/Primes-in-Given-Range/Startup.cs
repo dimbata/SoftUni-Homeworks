@@ -9,7 +9,10 @@
         {
 
             /*
-             * Write a Boolean method IsPrime(n) that check whether a given integer number n is prime. 
+             * Write a method that calculates all prime numbers in given range and returns them as list of integers.
+             * Write a method to print a list of integers. 
+             * Write a program that enters two integer numbers (each at a separate line) 
+             * and prints all primes in their range, separated by a comma.
              */
 
             List<long> primeNumbers = FindPrimesInRange(Math.Abs(long.Parse(Console.ReadLine())), Math.Abs(long.Parse(Console.ReadLine())));
@@ -21,7 +24,7 @@
         {
             List<long> result = new List<long>();
 
-            for (long i = startNumber; i < endNumber; i++)
+            for (long i = startNumber; i <= endNumber; i++)
             {
                 if (CheckIfPrime(i))
                 {
@@ -51,3 +54,4 @@
         }
     }
 }
+ 
