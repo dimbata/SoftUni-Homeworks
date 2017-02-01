@@ -6,7 +6,7 @@
     {
         public static void Main()
         {
-            PrintTriangle(5);
+            PrintTriangle(int.Parse(Console.ReadLine()));
         }
 
         public static void PrintTriangle(int number)

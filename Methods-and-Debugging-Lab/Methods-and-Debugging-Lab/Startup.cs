@@ -18,18 +18,18 @@
         public static void PrintHeader()
         {
             Console.WriteLine("CASH RECEIPT");
-            Console.WriteLine(new string('-', 20));
+            Console.WriteLine("------------------------------");
         }
 
         public static void PrintBody()
         {
-            Console.WriteLine("Charged to__________");
-            Console.WriteLine("Received by_________");
+            Console.WriteLine("Charged to____________________");
+            Console.WriteLine("Received by___________________");
         }
 
         public static void PrintFooter()
         {
-            Console.WriteLine(new string('-', 20));
+            Console.WriteLine("------------------------------");
             Console.WriteLine("\u00A9 SoftUni");
         }
 
