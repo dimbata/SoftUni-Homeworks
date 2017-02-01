@@ -17,22 +17,16 @@ public class Startup
             The input will be in the described format, there is no need to check it explicitly.
          */
 
-        int N = int.Parse(Console.ReadLine());
-        int FT = int.Parse(Console.ReadLine());
-        int FF = int.Parse(Console.ReadLine());
-        int UT = int.Parse(Console.ReadLine());
+        long N = long.Parse(Console.ReadLine());
+        long FT = long.Parse(Console.ReadLine());
+        long FF = long.Parse(Console.ReadLine());
+        long UT = long.Parse(Console.ReadLine());
 
         long secondsToCheckAllPhotos = N * FT;
-        int filteredPictures = (int)Math.Ceiling(N * (FF / 100.0));
+        long filteredPictures = (long)Math.Ceiling(N * (FF / 100.0));
         long secondsToUploadGoodPhotos = filteredPictures * UT;
         long fullTime = secondsToCheckAllPhotos + secondsToUploadGoodPhotos;
 
-        int seconds = (int)fullTime % 60;
-        int minutes = (int)((fullTime / 60)%60);
-        int hours = (int)((fullTime / 3600)%3600);
-        int days = (int)((fullTime / (3600 * 24))%(3600*24));
-
-        Console.WriteLine(days.ToString("0") + ":" + hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00"));
         Console.WriteLine(TimeSpan.FromSeconds(fullTime).ToString(new string('d',1) + @"\:hh\:mm\:ss"));
     }
 }
