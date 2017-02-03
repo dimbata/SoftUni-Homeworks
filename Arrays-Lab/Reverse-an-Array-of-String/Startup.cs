@@ -14,6 +14,8 @@
 
             string[] arrayOfStrings = Console.ReadLine().Split(' ');
 
+            // Array.Reverse could be used, but the point is to be able to understand how this works
+
             for (int i = 0; i < arrayOfStrings.Length / 2; i++)
             {
                 string tempHolder = arrayOfStrings[i];
